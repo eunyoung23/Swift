@@ -1,0 +1,17 @@
+let a = 7
+let b: Int8 = a //오류가 남
+let b: Int64 = a //오류가 남
+//자료형의 이름이 다르다면 무조건 호환되지 않음
+
+let a = 12
+let b = 34.56
+let result = a + b //오류가 남
+
+let rate: Int = 1.94 //다른 언어에서는 허용이 되지만 스위프트에서는 여기서부터 막힘
+
+let rate = 1.94
+let amt = 10_000_000
+let result = rate * amt //오류가 남 , 서로 호환되는 타입이 아니므로
+let result = rate * Double(amt) //오류가 해결이 됨
+Int(rate * Double(amt)) //해결이 됨 - 19400000 출력이 됨
+Int(rate) * amt //해결이 됨 - 10000000 출력이 됨
