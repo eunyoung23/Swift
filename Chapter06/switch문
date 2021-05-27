@@ -1,0 +1,103 @@
+let num = 1
+
+//01
+switch num {
+case 1: 
+  print("one")
+case 2,3:
+  print("two or three")
+default:
+  print("others")
+}
+
+//02
+switch num {
+case 1: 
+  print("one")
+case 2,3:
+  print("two or three")
+default:
+  break    //만약 default문에서 아무 작업도 하고 싶지 않다면 break문을 적으면 됨
+}
+//매칭이 된다면 이어지는 조건을 보지 않고 바로 종료가 됨
+
+
+--------------------------------------------------------------------
+
+switch num {
+case let n where n <= 10 :
+    print(n)
+default:
+    print("others")
+}
+//"1\n"이 출력됨
+
+--------------------------------------------------------------------
+
+let temperature = -8
+
+switch temperature {
+case ..<10:
+  print("Cold")
+case 11..<20:
+  print("Cool")
+case 21..<27:
+  print("Warm")
+case 28... :
+  print("Hot")
+default:
+  break
+}
+
+//switch문에서 범위 연산자를 사용해서 범위를 매칭시키는 것도 가능함
+
+//switch문에서의 fall through
+
+let num = 2
+
+switch num {
+case 1:
+    print("one")
+case 2:
+    print("two")
+    fallthrough
+case 3:
+    print("three")
+default:
+  break
+}
+
+//"two\n"
+//"three\n"가 출력됨
+//fall through를 사용하면 매칭된 블록을 찾은 후 종료하는 것이 아니라 이어지는 블록을 실행함 - 이땐 이어지는 블록을 실행할때는
+case가 매칭되는 것을 전혀 신경쓰지 않음
+
+let attempts = 10
+
+switch attempts {
+case ..<10:
+  print("warning")
+case 10:
+  print("warning")
+  print("reset")
+default:
+  print("reset")
+}
+
+//위의 코드를 fall through를 사용하면
+
+switch attempts {
+case ..<10:
+  print("warning")
+case 10:
+  print("warning")
+  fallthrough
+default:
+  print("reset")
+}
+
+//"warning\n"
+//"reset\n"이 출력됨
+
+--코드 중복을 줄일 수 있는 
+
