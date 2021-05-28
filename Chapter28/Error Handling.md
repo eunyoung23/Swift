@@ -37,8 +37,15 @@ func parsing(data: [String: Any]) throws {
 ```
 - Throwing Function을 호출할때는 try Statements를 사용함
 ```
-try expression
-try? expression
-try! expression
+try expression //주로 do catch문과 함께 사용함
+try? expression  //옵셔널 try라고 부르고 표현식에서 error가 발생할 경우 nil을 리턴함
+try! expression  //에러가 발생할 경우 runtime 에러가 발생함, 가능하면 사용하지 않는 것이 좋음
 //표현식 부분에는 주로 Throwing Function/Method,Throwing Initializer,Throwing Closure가 
 ```
+```
+try? parsing(data: [:]).    //nil을 리턴함
+```
+-에러를 처리하는 방법은 주로 3가지로 분류함
+- 1. do-catch statements
+- 2. try expression + optional Binding
+- 3. 전달받은 에러를 다른 코드 블럭으로 다시 전달함
