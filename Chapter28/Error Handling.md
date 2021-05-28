@@ -35,4 +35,10 @@ func parsing(data: [String: Any]) throws {
 //parameter로 전달된 딕셔너리에 name키가 추가되어 있고 age에 저장된 값을 Int로 캐스팅할 수 있다면 throw문은 호출되지 않음.
 //throw문은 에러가 발생한 경우에만 호출됨.
 ```
-
+- Throwing Function을 호출할때는 try Statements를 사용함
+```
+try expression
+try? expression
+try! expression
+//표현식 부분에는 주로 Throwing Function/Method,Throwing Initializer,Throwing Closure가 
+```
