@@ -1,15 +1,15 @@
-'''
+```
 guard condition else {        //guard블럭에서는 else키워드를 생략할 수 없음
   statements
 }
 //condition이 true로 평가되면 else블럭이 실행되지 않고 반대로 false로 평가되면 else블럭이 실행됨.
-'''
+```
 
-'''
+```
 guard optionalBinding else {
   statements
 }                 //guard문을 optionalbinding에서도 사용할 수 있음
-'''
+```
 
 guard문의 장점 : if문에서 발생하는 중첩을 피할 수 있고 코드가 좀더 깔끔해짐
 
