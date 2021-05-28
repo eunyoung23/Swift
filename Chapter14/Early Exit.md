@@ -11,10 +11,10 @@ guard optionalBinding else {
 }                 //guard문을 optionalbinding에서도 사용할 수 있음
 ```
 
-guard문의 장점 : if문에서 발생하는 중첩을 피할 수 있고 코드가 좀더 깔끔해짐
+- guard문의 장점 : if문에서 발생하는 중첩을 피할 수 있고 코드가 좀더 깔끔해짐
 
 ------------------------------------------------------------------------
-
+```
 func validate(id: String?) -> Bool {  
    guard let id = id else{     //조건이 true가 되면 다음 guard문이 실행이 됨.
       return false
@@ -30,16 +30,18 @@ func validate(id: String?) -> Bool {
    
    return true
 }
-//guard문은 대부분 local scope에서 사용하고 else문은 해당 local scope의 실행을 중지시키는 것
-
+```
+- guard문은 대부분 local scope에서 사용하고 else문은 해당 local scope의 실행을 중지시키는 것
+```
 validate(id:nil)   //호출하면 false가 출력이 됨 -- 첫번쨰에서 optional binding이 실패해서 false 출력함
 validate(id: "abc").  //호출하면 false가 출력이 됨
 validate(id: "swiftlang").  //호출하면 true가 출력이 됨
-
+```
 //***** guard문에서 else문은 필수이고 반드시 코드의 실행을 중지해야 함 *******//
 
 -----------------------------------------------------------------------
 **********guard문과 if문을 사용했을 때의 차이점*******************
+```
 //#1
 func validateUsingIf(){
     var id:String? = nil
@@ -50,8 +52,8 @@ func validateUsingIf(){
        }
     }
 }
-
-
+```
+```
 //#2
 func validateUsingGuard(){
     var id:String? = nil
@@ -65,6 +67,6 @@ func validateUsingGuard(){
     
     print(str)
 }
-
-//guard문은 조건의 수가 늘어나더라고 코드의 중첩은 발생하지 않음
+```
+-guard문은 조건의 수가 늘어나더라고 코드의 중첩은 발생하지 않음
 
