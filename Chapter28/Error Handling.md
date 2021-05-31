@@ -8,22 +8,27 @@ enum DataParsingError: Error {
 ```
 -----------------------------------------------------------------------------------
 - 발생한 Error종류를 확인하고 Error를 처리함
+- Error를 전달하는 것을 Error를 던진다고 표현함
+- 코드 불럭이 에러를 던질 수 있다고 선언 가능해야지 throw를 사용할 수 있음
+```
+throw expression
+```
 ```
 /*throw expression*/
-
+#1 함수
 func name(parameters) throws -> ReturnType { //Throwing Function/Method
   statements
 }
-
+#2 생성자
 init(parameters) throws {  //Throwing Initializer
   statements
 }
-
+#3 클로저
 { (parameters) throws -> ReturnType in   //Throwing Closure
   statements
 }
 ```
-- Error를 전달하는 것을 Error를 던진다고 표현함
+
 ```
 func parsing(data: [String: Any]) throws {
   guard let _ = data["name"] else{
