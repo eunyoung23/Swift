@@ -11,10 +11,10 @@ enum DataParsingError: Error {
 - Error를 전달하는 것을 Error를 던진다고 표현함
 - 코드 불럭이 에러를 던질 수 있다고 선언 가능해야지 throw를 사용할 수 있음
 ```
-throw expression
+throw expression  : 여기서 throw 키워드는 에러를 던지는 것
 ```
 ```
-/*throw expression*/
+/*throw expression*/   : 여기서 throws키워드는 함수,생성자,메서드가 에러를 던질 수 있다고 선언하는 것
 #1 함수
 func name(parameters) throws -> ReturnType { //Throwing Function/Method
   statements
