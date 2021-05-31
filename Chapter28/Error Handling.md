@@ -7,7 +7,7 @@ enum DataParsingError: Error {
 }
 ```
 -----------------------------------------------------------------------------------
-- 발생한 Error종류를 확인하고 Error를 
+- 발생한 Error종류를 확인하고 Error를 처리함
 ```
 /*throw expression*/
 
