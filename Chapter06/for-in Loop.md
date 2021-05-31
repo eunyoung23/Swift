@@ -1,4 +1,4 @@
-- 범위 연산자로 지정한 범위 반복하기
+1. 범위 연산자로 지정한 범위 반복하기
 ```
 for loopConStant in Range {
   statements
@@ -40,7 +40,7 @@ for num in stride(from: 0, to: 10, by: 2){
 //0 2 4 6 8이 출력됨
 ```
 
-- 컬렉션(배열이나 딕셔너리)을 반복하기
+2. 컬렉션(배열이나 딕셔너리)을 반복하기
 ```
 for loopConStant in Collection [
   statments
@@ -52,7 +52,7 @@ for fruit in list { //배열에 저장되어 있는 문자열을 순서대로 �
   print(fruit)
 }
 ```
--반복문이 중첩될 수 있음
+3. 반복문이 중첩될 수 있음
 ```
 for i in 2 ... 9 {
   for j in 1 ... 9 {
