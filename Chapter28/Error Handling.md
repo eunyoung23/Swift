@@ -6,6 +6,7 @@ enum DataParsingError: Error {
   case missingRequired(String)
 }
 ```
+-----------------------------------------------------------------------------------
 ```
 /*throw expression*/
 
