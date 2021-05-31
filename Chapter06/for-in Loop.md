@@ -14,7 +14,7 @@ for index in 1 ... 5 {
   print(index)
 }
 ```
--_사용하기
+- _사용하기
 ```
 for _ in 1 ... 5 {
   print(index)
@@ -32,8 +32,7 @@ for _ in 1 ... power {
 result //1024 출력됨
 ```
 
-- 짝수만 곱하고 싶다면
-- 핵심은 stride함수
+- 짝수만 곱하고 싶다면 : 핵심은 stride함수
 ```
 for num in stride(from: 0, to: 10, by: 2){
   print(num)
