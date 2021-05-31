@@ -1,5 +1,3 @@
-- do-catch문
-----------------------------------------
 - do블럭과 catch블럭으로 구분되어 있음
 - do블럭은 필수 블럭, try 표현식을 사용해서 에러가 발생할 수 있는 코드를 실행함
 - do블럭에서 발생가능한 모든 에러는 catch블럭에서 모두 처리되어야 함
@@ -43,4 +41,30 @@ do {
 }
 
 //두번쨰 블럭과 매칭되어서 "handle error"을 출력함
+```
+---------------------------------------------
+```
+enum DataParsingError: Error {
+  case invalidType
+  case invalidField
+  case missingRequiredField(String)
+}
+
+func parsing(data: [String: Any]) throws {
+  guard let _ = data["name"] else {
+    throw DataParsingError.missingRequiredField("name")  
+  }
+  
+  guard let _ = data["age"] as? Int else {
+    throw DataParsingError.invalidType
+  }
+}
+
+do {
+  try parsing(data: ["name": ""])
+} catch {
+  print("handle error")
+} catch {
+  print("invalid type error")
+}
 ```
