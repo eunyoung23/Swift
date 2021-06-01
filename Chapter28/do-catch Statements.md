@@ -67,4 +67,32 @@ do {
 } catch {
   print("invalid type error")
 }
+}
+//handle error가 출력됨 - 따라서 패턴이 생략된 catch 블럭을 맨 마지막에 실행해야 함
 ```
+
+- do catch문은 반드시 do블럭에서 발생할 수 있는 에러를 catch블럭에서 처리해야 함
+- 에러를 처리하는 방법은 크게 2가지 임
+1. 발생할 수 있는 모든 에러를 catch블럭에서 처리함  
+2. 함수가 에러를 다른 코드로 던지도록 선언함
+```
+func handleError() throws {
+  do {
+    try parsing(data: ["name":""])
+  } catch DataParsingError.invalidType{
+    print("invalid type error")
+  }
+}
+//invalid type error를 제외한 다른 에러는 handleerror를 호출한 함수로 전달이 됨 
+```
+```
+func handleError() throws {
+  do {
+    try parsing(data: ["name":""])
+  } 
+}
+//이런 방법도 가능함
+```
+
+
+
