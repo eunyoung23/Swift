@@ -93,6 +93,11 @@ func handleError() throws {
 }
 //이런 방법도 가능함
 ```
-
+```
+func handleError() throws {
+    try parsing(data: ["name":""])
+}
+//이런 방법도 가능함
+```
 
 
