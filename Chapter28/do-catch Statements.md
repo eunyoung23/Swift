@@ -99,5 +99,24 @@ func handleError() throws {
 }
 //이런 방법도 가능함
 ```
+- 패턴이 없는 catch 블럭인 경우는?
+```
+func handleError() throws {
+  do {
+    try parsing(data: ["name":""])
+  } catch {
+    if let error = error as? DataParsingError {
+        switch error {
+        case .invalidType:
+            print("invalid type")
+        default:
+            print("handle error")
+        }
+    }
+  }
+}
 
+
+
+```
 
