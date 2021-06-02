@@ -1,4 +1,4 @@
-- 에러를 던지는 함수나 생성자를 호할때는 try표현식을 사용해야 함
+- 에러를 던지는 함수나 생성자를 호출할때는 try표현식을 사용해야 함
 - do 블럭이 아닌 다른 곳에서 try문을 사용할때는 optional try나 forced try를 사용함
 - Optional try(try? expression) - 표현식에서 에러가 전달된 경우 nil을 리턴함
 - Forced try(try! expression) - 표현식에서 에러가 전달된 경우 실행을 중지함, 런타임 에러가 발생함
