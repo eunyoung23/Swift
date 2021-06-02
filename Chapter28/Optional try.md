@@ -40,3 +40,11 @@ do {
 }
 
 ```
+
+-optional try를 사용한다고 항상 optinal binding을 사용해야 하는 것은 아님
+```
+try? parsing(data: [:])
+```
+```
+try! parsing(data: ["name": "steve" , "age": 33])
+```
