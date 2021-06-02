@@ -31,7 +31,6 @@ case .failure(let error):
 }
 //함수가 정상적으로 호출되면 success케이스가 호출되고 에러가 나면 failure케이스가 호출됨
 ```
-
 -DelayedErrorHandling
 ```
 fun processResult(oddNumber: Int) throws -> Result<Int, NumberError> {
