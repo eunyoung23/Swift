@@ -27,3 +27,62 @@ let result = c2("Closure")
 print(result)
 //클로저를 사용할때는 argument레이블을 사용하지 않음
 ```
+
+```
+typealias SimpleStringClosure = (String) -> String
+
+func perform(closure: SimpleStringClosure) {
+	print(closure("iOS"))
+}
+perform(closure: c2) //Hello, iOS가 출력됨
+//상수에 저장된 클로저를 argument에 전달함
+```
+
+```
+//클로저 자체를 직접 argument로 전달함
+perform(closure: { (str: String) -> String in
+	return "Hi, \(str)"
+})
+//Hi, iOS가 출력됨
+```
+-----------------------------------------
+```
+let products = [
+   "MacBook Air","MacBook Pro",
+   "iMac","iMac Pro","Mac Pro","Mac mini",
+   "iPad Pro","iPad","iPad mini",
+   "iPhone Xs","iPhone Xr","iPhone 8","iPhone 7",
+   "AirPods",
+   "Apple Watch Series 4","Apple Watch Nike+"
+]
+
+var proModels = products.filter({ (name: String) -> Bool
+   in
+   return name.contains("Pro")
+})
+
+print(proModels)
+
+proModels.sort(by: { 1hs: String, rhs: String) ->
+  Bool in
+  return 1hs.caseInsensitiveCompare(rhs)
+  == .orderedAscending
+})
+
+print(proModels)
+```
+-----------------------------------------
+```
+print("Start")
+
+DispatchQueue.main.asyncAfter(deadline: .now() + 5, execute: {
+   print("End")
+})
+
+DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+   print("End")
+})
+//위의 두코드는 완전히 같음
+
+})
+```
