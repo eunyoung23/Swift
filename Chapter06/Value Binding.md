@@ -64,7 +64,7 @@ let pt = (1,2)
 switch pt {
 case let(x,y):
     print(x,y)
-case (let x, let y):
+case (let x, let y):  
     print(x,y)
 case (let x, var y):
     print(x,y)
