@@ -1,14 +1,13 @@
+```
 //***** String *****//
 
 "Have a nice day"
 
 let str = "1"
 type(of: str)     //String.Type
-
-
-
+```
+```
 //***** Character *****//
-
 let ch: Character = "1"
 type(of: ch)     //Character.Type
 
@@ -19,3 +18,4 @@ let doubleCh: Character = "AA"   //오류남
 
 let emptyCh: Character= "" //오류가 남
 let emptyCh: Character= " "
+```
