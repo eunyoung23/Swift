@@ -1,4 +1,5 @@
 //****Type Conversion*****/
+```
 //Type(value)
 
 let a = 123
@@ -17,6 +18,5 @@ let num = Int(str) //123
 
 let str = "number" //"number"
 let num = Int(str) //nil
-
-
+```
 /************type conversion이 실패했을때 nil이 리턴될 수 있음***********/
