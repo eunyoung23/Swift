@@ -1,4 +1,6 @@
--let isValid: Bool = true
+```
+let isValid: Bool = true
+```
 
 ```
 let str = ""
@@ -9,11 +11,10 @@ if isValid{
 
 }
 ```
-
 ```
 while !isValid{
 
 }
-
+```
 
 
