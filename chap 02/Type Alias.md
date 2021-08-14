@@ -1,4 +1,4 @@
-//*****typealis NewName = TypeName*******//
+*****typealis NewName = TypeName*******
 ```
 typealias Coordinate = Double
 
