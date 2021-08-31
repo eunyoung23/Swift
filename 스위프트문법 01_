@@ -1,0 +1,77 @@
+# Chapter 01. 스위프트 기초
+
+## 키워드
+
+<pre><code>명명규칙</code></pre> <pre><code>print()함수</code></pre>
+
+<pre><code>문자열 보간법</pre></code>
+
+<pre><code>주석</code></pre>
+
+<pre><code>변수와 상수</code></pre>
+
+
+
+> print() 함수
+
+- print() 함수 : 디버깅 콘솔에 간략한 정보를 출력함
+- dump() 함수 : 조금 더 자세한 정보를 출력함
+
+
+
+> 문자열 보간법(String Interpolation)
+
+문자열 내에서 변수 또는 상수 등의 값을 나타내고 싶을 때 사용합니다.
+
+```swift
+let name: String = "eunyoung"
+print("My name is \(name)")
+```
+
+
+
+> 주석
+
+- 한 줄 주석
+
+  ```swift
+  // 한 줄 주석은 이렇습니다!!
+  ```
+
+- 여러 줄 주석
+
+  ```swift
+  /*
+  여러 줄 이렇게 표현합니다!!
+  */
+  ```
+
+- 중첩 주석
+
+  ```swift
+  /*
+  //중첩 주석은 이렇게 표현합니다!
+  */
+  ```
+
+  
+
+> 변수와 상수
+
+- 변수(var 키워드) : 생성한 후에 값을 변경할 수 있음
+- 상수(let 키워드) : 생성한 후에 값을 변경할 수 없음
+
+```swift
+var name: String = "eunyoung"
+var age: Int = 25
+print("저의 이름은 \(name)이고 나이는 \(age)세입니다.")
+
+let name: String = "eunyoung"
+let height = 168
+print("저의 이름은 \(name)이고 키는 \(height)입니다.")
+```
+
+```markdown
+* 변수와 상수 모두 데이터 타입을 생략할 수 있다.
+```
+
